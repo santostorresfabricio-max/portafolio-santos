@@ -1,0 +1,247 @@
+/* =========================================
+   FOOTER GENERAL
+========================================= */
+.footer {
+    background: linear-gradient(
+        180deg,
+        #0b0f19 0%,
+        #09101f 100%
+    );
+
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+
+    padding: 5rem 5% 2rem;
+}
+
+/* =========================================
+   CONTENEDOR
+========================================= */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.2fr;
+    gap: 3rem;
+
+    padding-bottom: 3rem;
+}
+
+/* =========================================
+   LOGO Y DESCRIPCIÓN
+========================================= */
+.footer-logo {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.footer-logo span {
+    color: #00d8ff;
+}
+
+.footer-description {
+    color: #8b95a1;
+    line-height: 1.8;
+    font-size: 0.95rem;
+    max-width: 450px;
+    margin-bottom: 1.5rem;
+}
+
+/* =========================================
+   ESTADO
+========================================= */
+.footer-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+
+    background-color: rgba(17, 26, 46, 0.8);
+
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    padding: 0.8rem 1rem;
+    border-radius: 50px;
+
+    color: #dbe4ee;
+    font-size: 0.9rem;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #6ee7b7;
+
+    box-shadow: 0 0 10px #6ee7b7;
+}
+
+/* =========================================
+   TITULOS
+========================================= */
+.footer-title {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+/* =========================================
+   LINKS
+========================================= */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: #8b95a1;
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #00d8ff;
+    padding-left: 5px;
+}
+
+/* =========================================
+   CONTACTO
+========================================= */
+.contact-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    color: #8b95a1;
+    font-size: 0.95rem;
+
+    background-color: rgba(17, 26, 46, 0.5);
+
+    padding: 0.9rem 1rem;
+    border-radius: 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.04);
+
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateX(5px);
+
+    border-color: rgba(0, 216, 255, 0.2);
+
+    color: #ffffff;
+}
+
+.contact-icon {
+    color: #00d8ff;
+}
+
+/* =========================================
+   FOOTER INFERIOR
+========================================= */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+
+    padding-top: 2rem;
+
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-bottom p {
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   REDES
+========================================= */
+.footer-socials {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-socials a {
+    color: #8b95a1;
+    text-decoration: none;
+    font-size: 0.95rem;
+
+    position: relative;
+
+    transition: color 0.3s ease;
+}
+
+.footer-socials a::after {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+
+    width: 0%;
+    height: 2px;
+
+    background-color: #00d8ff;
+
+    transition: width 0.3s ease;
+}
+
+.footer-socials a:hover {
+    color: #ffffff;
+}
+
+.footer-socials a:hover::after {
+    width: 100%;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media (max-width: 900px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .footer {
+        padding: 4rem 1.5rem 2rem;
+    }
+
+    .footer-logo {
+        font-size: 1.7rem;
+    }
+
+    .footer-socials {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
