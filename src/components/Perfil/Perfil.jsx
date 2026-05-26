@@ -1,170 +1,170 @@
 import './Perfil.css';
+
 const Perfil = () => {
     return (
-        <section id="sobre-mi" className="sobre-mi-section">
-            <div className="sobre-mi-container">
-                <h2 className="section-title">Sobre mí</h2>
-                <div className="sobre-mi-grid">
+        <section id="sobre-mi" className="sobre-mi-section py-5">
+            <div className="container mt-5">
+                <h2 className="display-5 fw-bold text-center mb-5">
+                    Sobre <span className="text-cyan">mí</span>
+                </h2>
+                
+                <div className="row g-4">
                     {/* =====================================
-TARJETA 1: PERFIL PROFESIONAL
-====================================== */}
-                    <div className="card">
-                        <div className="card-header">
-                            {/* Ícono de Usuario (SVG) */}
-                            <div className="icon-box">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4
+                        TARJETA 1: PERFIL PROFESIONAL
+                    ====================================== */}
+                    <div className="col-lg-6">
+                        <div className="card glass-card h-100 p-4 border-0 rounded-4">
+                            <div className="card-body">
+                                <div className="d-flex align-items-center mb-4">
+                                    <div className="icon-box-neon me-3 d-flex align-items-center justify-content-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-cyan">
+                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="12" cy="7" r="4"></circle>
+                                        </svg>
+                                    </div>
+                                    <h3 className="h4 fw-bold m-0">Perfil profesional</h3>
+                                </div>
+                                
+                                <p className="text-secondary fs-6 lh-lg">
+    Estudiante de Informática y Desarrollo de Aplicaciones Web en SENATI,
+    actualmente cursando el III ciclo y enfocado en el desarrollo de
+    aplicaciones web modernas y responsivas.
 
-4v2"></path>
+    <br /><br />
 
-                                    <circle cx="12" cy="7" r="4"></circle>
-                                </svg>
+    Trabajo principalmente con tecnologías como HTML, CSS, JavaScript,
+    React, PHP y Laravel, además de bases de datos relacionales como MySQL.
+
+    <br /><br />
+
+    Me caracterizo por el aprendizaje constante, la resolución de problemas
+    y el interés por seguir creciendo como desarrollador frontend y backend.
+</p>
                             </div>
-                            <h3>Perfil profesional</h3>
                         </div>
-
-                        <p className="card-text">
-                            Estudiante de Informática y Desarrollo de Aplicaciones Web,
-                            actualmente cursando el III ciclo y fortaleciendo constantemente mis
-                            conocimientos en tecnologías frontend y backend.
-
-                            <br /><br />
-
-                            Tengo experiencia desarrollando interfaces web modernas y responsivas
-                            utilizando HTML, CSS, JavaScript y React, así como conocimientos en
-                            bases de datos relacionales con MySQL, SQL Server y PostgreSQL.
-
-                            <br /><br />
-
-                            También cuento con conocimientos en herramientas de análisis de datos
-                            como Power BI, Excel avanzado y Python orientado al análisis de
-                            información. Me caracterizo por el aprendizaje continuo, la resolución
-                            de problemas y el interés por desarrollar soluciones tecnológicas
-                            funcionales enfocadas en mejorar la experiencia del usuario.
-                        </p>
                     </div>
+
                     {/* =====================================
-TARJETA 2: EDUCACIÓN
-====================================== */}
-                    <div className="card">
-                        <div className="card-header">
-                            {/* Ícono de Educación / Sombrero (SVG) */}
-                            <div className="icon-box">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-                                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
-                                </svg>
-                            </div>
-                            <h3>Educación</h3>
-                        </div>
-
-                        <div className="timeline">
-
-                            {/* Educación 1 */}
-                            <div className="timeline-item">
-
-                                <div className="timeline-header">
-
-                                    <h4>Computación e Informática</h4>
-
-                                    <span className="badge badge-outline">
-                                        En Formación
-                                    </span>
-
+                        TARJETA 2: EDUCACIÓN
+                    ====================================== */}
+                    <div className="col-lg-6">
+                        <div className="card glass-card h-100 p-4 border-0 rounded-4">
+                            <div className="card-body">
+                                <div className="d-flex align-items-center mb-4">
+                                    <div className="icon-box-neon me-3 d-flex align-items-center justify-content-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-cyan">
+                                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                                        </svg>
+                                    </div>
+                                    <h3 className="h4 fw-bold m-0">Educación</h3>
                                 </div>
 
-                                <span className="timeline-date">
-                                    Instituto de Educación Superior
-                                </span>
+                                <div className="timeline-neon">
 
+    {/* Educación 1 */}
+    <div className="timeline-item-neon position-relative pb-4 ps-4">
+        <div className="timeline-dot position-absolute bg-cyan"></div>
+
+        <div className="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-1">
+            <h4 className="h6 fw-bold m-0">
+                Informática y Desarrollo de Aplicaciones Web
+            </h4>
+
+            <span className="badge border border-info text-info bg-transparent">
+                III Ciclo
+            </span>
+        </div>
+
+        <span className="text-secondary small">
+            SENATI — Formación Profesional
+        </span>
+    </div>
+
+    {/* Educación 2 */}
+    <div className="timeline-item-neon position-relative pb-4 ps-4">
+        <div className="timeline-dot position-absolute bg-cyan"></div>
+
+        <div className="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-1">
+            <h4 className="h6 fw-bold m-0">
+                Desarrollo Frontend
+            </h4>
+
+            <span className="badge border border-primary text-primary bg-transparent">
+                En Formación
+            </span>
+        </div>
+
+        <span className="text-secondary small">
+            HTML, CSS, JavaScript y React
+        </span>
+    </div>
+
+    {/* Educación 3 */}
+    <div className="timeline-item-neon position-relative pb-4 ps-4">
+        <div className="timeline-dot position-absolute bg-cyan"></div>
+
+        <div className="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-1">
+            <h4 className="h6 fw-bold m-0">
+                Desarrollo Backend
+            </h4>
+
+            <span className="badge border border-success text-success bg-transparent">
+                Aprendizaje Activo
+            </span>
+        </div>
+
+        <span className="text-secondary small">
+            PHP, Laravel y arquitectura MVC
+        </span>
+    </div>
+
+    {/* Educación 4 */}
+    <div className="timeline-item-neon position-relative pb-4 ps-4">
+        <div className="timeline-dot position-absolute bg-cyan"></div>
+
+        <div className="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-1">
+            <h4 className="h6 fw-bold m-0">
+                Bases de Datos Relacionales
+            </h4>
+
+            <span className="badge border border-warning text-warning bg-transparent">
+                Formación Técnica
+            </span>
+        </div>
+
+        <span className="text-secondary small">
+            MySQL y modelado de bases de datos
+        </span>
+    </div>
+
+    {/* Educación 5 */}
+    <div className="timeline-item-neon position-relative ps-4">
+        <div className="timeline-dot position-absolute bg-cyan"></div>
+
+        <div className="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-1">
+            <h4 className="h6 fw-bold m-0">
+                Aprendizaje Continuo
+            </h4>
+
+            <span className="badge border border-light text-light bg-transparent">
+                Desarrollo Profesional
+            </span>
+        </div>
+
+        <span className="text-secondary small">
+            Proyectos personales, tecnologías web y mejora constante
+        </span>
+    </div>
+
+</div>
                             </div>
-
-                            {/* Educación 2 */}
-                            <div className="timeline-item">
-
-                                <div className="timeline-header">
-
-                                    <h4>Desarrollo de Aplicaciones Web</h4>
-
-                                    <span className="badge badge-outline">
-                                        Especialización
-                                    </span>
-
-                                </div>
-
-                                <span className="timeline-date">
-                                    Formación Académica y Proyectos Personales
-                                </span>
-
-                            </div>
-
-                            {/* Educación 3 */}
-                            <div className="timeline-item">
-
-                                <div className="timeline-header">
-
-                                    <h4>React & JavaScript Moderno</h4>
-
-                                    <span className="badge badge-outline">
-                                        Certificación
-                                    </span>
-
-                                </div>
-
-                                <span className="timeline-date">
-                                    Udemy / Coursera
-                                </span>
-
-                            </div>
-
-                            {/* Educación 4 */}
-                            <div className="timeline-item">
-
-                                <div className="timeline-header">
-
-                                    <h4>SQL y Bases de Datos</h4>
-
-                                    <span className="badge badge-outline">
-                                        Certificación
-                                    </span>
-
-                                </div>
-
-                                <span className="timeline-date">
-                                    Cisco Networking Academy
-                                </span>
-
-                            </div>
-
-                            {/* Educación 5 */}
-                            <div className="timeline-item">
-
-                                <div className="timeline-header">
-
-                                    <h4>Power BI y Análisis de Datos</h4>
-
-                                    <span className="badge badge-outline">
-                                        Formación Complementaria
-                                    </span>
-
-                                </div>
-
-                                <span className="timeline-date">
-                                    Microsoft Learn
-                                </span>
-
-                            </div>
-
                         </div>
                     </div>
                 </div>
             </div>
-
-        </section >
+        </section>
     );
 };
+
 export default Perfil;

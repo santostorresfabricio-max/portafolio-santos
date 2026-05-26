@@ -10,23 +10,22 @@ import Certificados from './components/Certificados/Certificados';
 
 import './App.css';
 import './index.css';
+
 function App() {
   return (
-    <>
+    <div className="bg-dark text-light min-vh-100 d-flex flex-column" style={{backgroundColor: 'var(--bg-dark-primary) !important'}}>
       <Navbar />
-      <Banner />
-      <Perfil />
-      <Habilidades />
-      <Certificados />
-      <Proyectos />
-      <Servicios />
-      <Contactos />
+      <main className="flex-grow-1">
+        <Banner />
+        <Perfil />
+        <Habilidades />
+        <Certificados />
+        <Proyectos />
+        <Servicios />
+        <Contactos />
+      </main>
       <Footer />
-
-      {/* El resto de secciones irán aquí debajo.
-Ejemplo: <Footer />
-*/}
-    </>
+    </div>
   )
 }
 export default App;

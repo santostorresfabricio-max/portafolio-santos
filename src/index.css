@@ -1,7 +1,69 @@
-/* En index.css */
+:root {
+  --neon-cyan: #00f2fe;
+  --neon-purple: #4facfe;
+  --bg-dark-primary: #0b0c10;
+  --bg-dark-secondary: #1f2833;
+  --text-primary: #c5c6c7;
+  --text-light: #ffffff;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--bg-dark-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-dark-secondary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-cyan);
+}
+
+.text-cyan {
+  color: var(--neon-cyan) !important;
+}
+
+/* Efectos globales reutilizables */
+.hover-neon {
+  transition: all 0.3s ease;
+}
+.hover-neon:hover {
+  text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan);
+}
+
+.glass-card {
+  background: rgba(31, 40, 51, 0.4) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 242, 254, 0.1) !important;
+  border-color: rgba(0, 242, 254, 0.3) !important;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
