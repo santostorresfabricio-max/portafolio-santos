@@ -1,15 +1,14 @@
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2';
 import './Contactos.css';
-
-const Contacto = () => {
-    // Estado centralizado para el formulario (Formulario Controlado)
+const Contactos = () => {
     const [formulario, setFormulario] = useState({
         nombre: '',
         email: '',
         mensaje: ''
     });
-
-    // Función para manejar los cambios en los inputs
+    const [cargando, setCargando] = useState(false);
     const manejarCambio = (e) => {
         const { name, value } = e.target;
         setFormulario({
@@ -17,22 +16,51 @@ const Contacto = () => {
             [name]: value
         });
     };
-
-    // Función para simular el envío
-    const manejarEnvio = (e) => {
+    const manejarEnvio = async (e) => {
         e.preventDefault();
-        alert(`¡Gracias por tu mensaje, ${formulario.nombre}! Te contactaré pronto.`);
-        // Limpiamos el formulario después de enviar
-        setFormulario({ nombre: '', email: '', mensaje: '' });
+        setCargando(true);
+        try {
+            const templateParams = {
+                nombre: formulario.nombre,
+                email: formulario.email,
+                mensaje: formulario.mensaje
+            };
+            await emailjs.send(
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+                templateParams,
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+            );
+            Swal.fire({
+                title: '¡Mensaje Enviado!',
+                text: 'Gracias por contactarme. Te responderé a la brevedad.',
+                icon: 'success',
+                confirmButtonColor: '#00d8ff',
+                background: '#111a2e',
+                color: '#ffffff'
+            });
+            setFormulario({ nombre: '', email: '', mensaje: '' });
+        } catch (error) {
+            console.error('Error al enviar el mensaje:', error);
+            Swal.fire({
+                title: 'Error',
+                text: 'Hubo un problema al enviar el mensaje. Inténtalo más tarde.',
+                icon: 'error',
+                confirmButtonColor: '#00d8ff',
+                background: '#111a2e',
+                color: '#ffffff'
+            });
+        } finally {
+            setCargando(false);
+        }
     };
-
     return (
         <section id="contacto" className="contacto-section py-5">
             <div className="container mt-5">
                 <h2 className="display-5 fw-bold text-center mb-5">
                     Trabajemos <span className="text-cyan">Juntos</span>
                 </h2>
-                
+
                 <div className="row g-5">
                     {/* =====================================
                         COLUMNA IZQUIERDA: INFORMACIÓN
@@ -45,11 +73,11 @@ const Contacto = () => {
                                 automatizar tus flujos de trabajo?
                                 Me encantaría escucharte.
                             </p>
-                            
+
                             <div className="d-flex flex-column gap-4">
                                 {/* Ítem Email */}
                                 <div className="d-flex align-items-center">
-                                    <div className="icon-box-neon rounded-circle d-flex align-items-center justify-content-center me-4" style={{width: '60px', height: '60px'}}>
+                                    <div className="icon-box-neon rounded-circle d-flex align-items-center justify-content-center me-4" style={{ width: '60px', height: '60px' }}>
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-cyan">
                                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                                             <polyline points="22,6 12,13 2,6"></polyline>
@@ -62,10 +90,10 @@ const Contacto = () => {
                                         </a>
                                     </div>
                                 </div>
-                                
+
                                 {/* Ítem Ubicación */}
                                 <div className="d-flex align-items-center">
-                                    <div className="icon-box-neon rounded-circle d-flex align-items-center justify-content-center me-4" style={{width: '60px', height: '60px'}}>
+                                    <div className="icon-box-neon rounded-circle d-flex align-items-center justify-content-center me-4" style={{ width: '60px', height: '60px' }}>
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-cyan">
                                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                             <circle cx="12" cy="10" r="3"></circle>
@@ -79,7 +107,7 @@ const Contacto = () => {
                             </div>
                         </div>
                     </div>
-                    
+
                     {/* =====================================
                         COLUMNA DERECHA: FORMULARIO
                     ====================================== */}
@@ -99,7 +127,7 @@ const Contacto = () => {
                                         required
                                     />
                                 </div>
-                                
+
                                 <div className="mb-4">
                                     <label htmlFor="email" className="form-label text-secondary fw-semibold">Email</label>
                                     <input
@@ -113,7 +141,7 @@ const Contacto = () => {
                                         required
                                     />
                                 </div>
-                                
+
                                 <div className="mb-5">
                                     <label htmlFor="mensaje" className="form-label text-secondary fw-semibold">Mensaje</label>
                                     <textarea
@@ -127,7 +155,7 @@ const Contacto = () => {
                                         required
                                     ></textarea>
                                 </div>
-                                
+
                                 <button type="submit" className="btn btn-outline-info btn-neon w-100 py-3 fs-5 fw-bold rounded-3">
                                     Enviar Mensaje
                                 </button>
@@ -140,4 +168,4 @@ const Contacto = () => {
     );
 };
 
-export default Contacto;
+export default Contactos;
