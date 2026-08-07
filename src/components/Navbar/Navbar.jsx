@@ -41,13 +41,13 @@ const Navbar = () => {
                             <a className="nav-link text-light hover-neon mx-2" href="#sobre-mi" onClick={() => setIsOpen(false)}>Perfil</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-light hover-neon mx-2" href="#tech-stack" onClick={() => setIsOpen(false)}>Tech Stack</a>
+                            <a className="nav-link text-light hover-neon mx-2" href="#tech-stack" onClick={() => setIsOpen(false)}>Habilidades</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link text-light hover-neon mx-2" href="#proyectos" onClick={() => setIsOpen(false)}>Proyectos</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-light hover-neon mx-2" href="#servicios" onClick={() => setIsOpen(false)}>Servicios</a>
+                            <a className="nav-link text-light hover-neon mx-2" href="#servicios" onClick={() => setIsOpen(false)}>Áreas</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link text-light hover-neon mx-2" href="#contacto" onClick={() => setIsOpen(false)}>Contacto</a>

@@ -7,59 +7,42 @@ const Servicios = () => {
             titulo: "Desarrollo Web Frontend",
             descripcion: "Creación de interfaces modernas, responsivas e interactivas utilizando HTML, CSS, JavaScript y React.",
             nivel: "En Formación",
-            botonTexto: "DISPONIBLE",
-            estado: "completado"
+            botonTexto: "EN PROCESO",
+            estado: "proceso"
         },
         {
             id: 2,
             titulo: "Diseño Responsive",
-            descripcion: "Adaptación de páginas web para dispositivos móviles, tablets y computadoras usando Flexbox y Grid.",
-            nivel: "Aprendizaje Activo",
-            botonTexto: "DISPONIBLE",
-            estado: "completado"
+            descripcion: "Diseño de interfaces adaptables a computadoras, tablets y dispositivos móviles, buscando una experiencia consistente en diferentes tamaños de pantalla.",
+            nivel: "En Formación",
+            botonTexto: "EN PROCESO",
+            estado: "proceso"
         },
         {
             id: 3,
             titulo: "Desarrollo Backend",
             descripcion: "Construcción de lógica del servidor y manejo de bases de datos con PHP y Laravel.",
             nivel: "En Formación",
-            botonTexto: "DISPONIBLE",
-            estado: "completado"
+            botonTexto: "EN PROCESO",
+            estado: "proceso"
         },
         {
             id: 4,
             titulo: "Gestión de Bases de Datos",
-            descripcion: "Diseño y consultas SQL en MySQL, PostgreSQL, SQL Server y Oracle.",
-            nivel: "Intermedio",
-            botonTexto: "DISPONIBLE",
+            descripcion: "Diseño de estructuras de datos y elaboración de consultas SQL para gestionar y consultar información en aplicaciones web.",
+            nivel: "En Formación",
+            botonTexto: "EN PROCESO",
             estado: "proceso"
-        },
-        {
-            id: 5,
-            titulo: "Dashboards y Análisis de Datos",
-            descripcion: "Desarrollo de visualizaciones e indicadores con Power BI para análisis empresarial.",
-            nivel: "Intermedio",
-            botonTexto: "En Proceso",
-            estado: "proceso"
-        },
-        {
-            id: 6,
-            titulo: "Mantenimiento Web",
-            descripcion: "Corrección de errores, optimización visual y mejora de rendimiento en páginas web.",
-            nivel: "Aprendizaje Activo",
-            botonTexto: "En Proceso",
-            estado: "proceso"
-        },
+        }
     ];
 
     return (
         <section id="servicios" className="servicios-section py-5">
             <div className="container mt-5">
                 <div className="text-center mb-5">
-                    <h2 className="display-5 fw-bold mb-3">Servicios</h2>
+                    <h2 className="display-5 fw-bold mb-3">Áreas de <span className="text-cyan">Desarrollo</span></h2>
                     <p className="text-secondary fs-5 mx-auto" style={{ maxWidth: '600px' }}>
-                        Servicios orientados al desarrollo web, análisis de datos
-                        y soluciones tecnológicas modernas.
+                        Áreas en las que aplico y continúo fortaleciendo mis conocimientos mediante proyectos académicos y personales.
                     </p>
                 </div>
 

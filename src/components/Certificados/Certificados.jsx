@@ -21,7 +21,7 @@ const Certificaciones = () => {
         {
             id: 2,
             titulo: 'SQL para Desarrollo Web',
-            institucion: 'Cisco Networking Academy',
+            institucion: 'Udemy',
             descripcion: 'Consultas SQL, relaciones entre tablas y gestión de bases de datos para aplicaciones web.',
             fecha: '2025',
             archivo: '#',

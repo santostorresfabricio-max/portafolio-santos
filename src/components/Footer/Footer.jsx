@@ -5,32 +5,22 @@ const Footer = () => {
         <footer className="footer">
 
             <div className="footer-container">
-
-                {/* ======================================
-                    COLUMNA PRINCIPAL
-                ====================================== */}
                 <div className="footer-brand">
 
                     <h2 className="footer-logo">
                         Fabricio <span>Santos</span>
                     </h2>
-
                     <p className="footer-description">
                         Estudiante de Informática y Desarrollo de Aplicaciones Web,
                         enfocado en crear soluciones modernas, funcionales y
                         orientadas a la experiencia del usuario.
                     </p>
-
                     <div className="footer-status">
                         <span className="status-dot"></span>
                         Disponible para prácticas y proyectos académicos
                     </div>
 
                 </div>
-
-                {/* ======================================
-                    LINKS RÁPIDOS
-                ====================================== */}
                 <div className="footer-links">
 
                     <h3 className="footer-title">
@@ -53,17 +43,12 @@ const Footer = () => {
                         <li>
                             <a href="#servicios">Servicios</a>
                         </li>
-
                         <li>
                             <a href="#proyectos">Proyectos</a>
                         </li>
                     </ul>
-
                 </div>
 
-                {/* ======================================
-                    CONTACTO
-                ====================================== */}
                 <div className="footer-contact">
 
                     <h3 className="footer-title">
@@ -159,9 +144,6 @@ const Footer = () => {
 
             </div>
 
-            {/* ======================================
-                BARRA INFERIOR
-            ====================================== */}
             <div className="footer-bottom">
 
                 <p>

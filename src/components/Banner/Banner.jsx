@@ -22,15 +22,12 @@ const Banner = () => {
                         
                         {/* Subtítulo (Rol) */}
                         <h2 className="hero-subtitle fs-4 text-secondary mb-4">
-                            Estudiante de Informática y Desarrollo de Aplicaciones Web |
-                            Frontend Developer Junior
+                            Estudiante de Desarrollo de Aplicaciones Web | Web Developer
                         </h2>
 
                         {/* Descripción */}
                         <p className="hero-description text-secondary mb-5 fs-5">
-                            Desarrollo interfaces web modernas, responsivas y funcionales utilizando
-                            tecnologías como React, JavaScript, HTML y CSS. Me apasiona aprender 
-                            nuevas tecnologías y construir soluciones digitales con gran experiencia de usuario.
+                            Desarrollo interfaces web modernas, responsivas y funcionales utilizando React, JavaScript, HTML y CSS. Actualmente fortalezco mis conocimientos en desarrollo frontend, backend y bases de datos mediante proyectos académicos y personales.
                         </p>
 
                         {/* Botones de Acción */}
@@ -49,7 +46,7 @@ const Banner = () => {
                         <div className="profile-photo-wrapper position-relative mx-auto">
                             {/* Placeholder estilizado: Este div desaparecerá o servirá de fondo cuando pongas la etiqueta img */}
                             <div className="photo-placeholder d-flex align-items-center justify-content-center">
-                                <span className="fs-5 text-secondary">Tu Foto Aquí</span>
+                                <span className="fs-5 text-secondary"></span>
                             </div>
                             
                             {/* 

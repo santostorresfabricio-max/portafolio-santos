@@ -27,7 +27,7 @@ const Perfil = () => {
                                 
                                 <p className="text-secondary fs-6 lh-lg">
     Estudiante de Informática y Desarrollo de Aplicaciones Web en SENATI,
-    actualmente cursando el III ciclo y enfocado en el desarrollo de
+    actualmente cursando el IV ciclo y enfocado en el desarrollo de
     aplicaciones web modernas y responsivas.
 
     <br /><br />
@@ -37,8 +37,7 @@ const Perfil = () => {
 
     <br /><br />
 
-    Me caracterizo por el aprendizaje constante, la resolución de problemas
-    y el interés por seguir creciendo como desarrollador frontend y backend.
+    Actualmente busco una oportunidad de prácticas preprofesionales donde pueda aplicar mis conocimientos, participar en proyectos reales y continuar desarrollando mis habilidades dentro de un equipo técnico.
 </p>
                             </div>
                         </div>

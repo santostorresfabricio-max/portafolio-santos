@@ -69,9 +69,7 @@ const Contactos = () => {
                         <div className="pe-lg-4">
                             <h3 className="h3 fw-bold mb-3">Ponte en Contacto</h3>
                             <p className="text-secondary fs-5 mb-5">
-                                ¿Tienes un proyecto en mente o necesitas ayuda para
-                                automatizar tus flujos de trabajo?
-                                Me encantaría escucharte.
+                                Si te interesa mi perfil o quieres conocer más sobre mis proyectos, estaré encantado de conversar contigo.
                             </p>
 
                             <div className="d-flex flex-column gap-4">
